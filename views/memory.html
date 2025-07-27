@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🧠 Memory Game</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #74b9ff, #a29bfe);
+      text-align: center;
+      padding: 40px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    #game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 80px);
+      gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .card {
+      width: 80px;
+      height: 80px;
+      font-size: 32px;
+      background: #ffeaa7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      user-select: none;
+    }
+
+    .card.flipped {
+      background: #fab1a0;
+    }
+
+    .card.matched {
+      background: #55efc4;
+      cursor: default;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🧠 Match the Emoji Pairs!</h2>
+
+  <div id="game-board">
+    <!-- Cards will be generated here by JS -->
+  </div>
+
+  <script src="/js/memory.js"></script>
+</body>
+</html>

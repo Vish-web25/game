@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>❓ Quiz Game</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #81ecec, #ffeaa7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    .question {
+      font-size: 24px;
+      margin: 20px 0;
+      color: #2d3436;
+    }
+
+    .option {
+      background: #fab1a0;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background 0.3s ease;
+    }
+
+    .option:hover {
+      background: #ff7675;
+      color: white;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>❓ Quiz Game</h2>
+
+  <div id="quiz">
+    <div class="question" id="question">Loading question...</div>
+    <div id="options"></div>
+    <div id="result"></div>
+  </div>
+
+  <script src="/js/quiz.js"></script>
+</body>
+</html>

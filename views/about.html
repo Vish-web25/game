@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎮 About This Game Arcade</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #dfe6e9, #74b9ff);
+      text-align: center;
+      padding: 40px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 10px 0 20px;
+      color: #2d3436;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px auto;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    .emoji {
+      font-size: 40px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #0984e3;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    .back:hover {
+      background: #6c5ce7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="emoji">🕹️🎲🎯</div>
+  <h1>Welcome to the Emoji Game Arcade!</h1>
+  <h2>Made with ❤️, Code, and a lot of 🎮!</h2>
+
+  <p>
+    This is a fun-filled mini game arcade developed using <strong>Node.js</strong>, <strong>HTML</strong>, and <strong>MongoDB Atlas</strong>. <br/>
+    Our goal was to create a professional, animated website with engaging logic games, all powered by emojis and no images!
+  </p>
+
+  <p>
+    Games include: 🧠 Memory, 🪨✂️📄 Rock Paper Scissors, ❓ Quiz, 🔢 Guess the Number, 🎯 Tic Tac Toe, and 🐍 Snake.
+  </p>
+
+  <p>
+    Your name is saved securely in the database, and your gaming journey is tracked across beautiful emoji-powered pages.
+  </p>
+
+  <p>Developed by <strong>Vishwaraj Jadhav 👨‍💻</strong></p>
+
+  <a class="back" href="/index">← Back to Games</a>
+
+</body>
+</html>

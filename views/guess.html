@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🔢 Number Guessing Game</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #2d3436;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 18px;
+      margin: 5px;
+      border-radius: 10px;
+      border: 2px solid #fd79a8;
+    }
+
+    button {
+      background: #fd79a8;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #e84393;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔢 Guess the Secret Number (1-100)</h2>
+
+  <input type="number" id="guess" placeholder="Enter your guess" min="1" max="100" />
+  <button onclick="checkGuess()">🎯 Guess</button>
+  <button onclick="restartGame()">🔁 Restart</button>
+
+  <p id="output">Start guessing... 🤔</p>
+
+  <script src="/js/guess.js"></script>
+
+</body>
+</html>

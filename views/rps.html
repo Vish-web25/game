@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🪨📄✂️ Rock Paper Scissors</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+      text-align: center;
+      padding: 50px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    .choices {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .choice {
+      font-size: 50px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .choice:hover {
+      transform: scale(1.1);
+      background-color: #ffeaa7;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #2d3436;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes bounce {
+      0%, 100% {transform: translateY(0);}
+      50% {transform: translateY(-10px);}
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🪨✂️📄 Rock Paper Scissors</h2>
+
+  <div class="choices">
+    <div class="choice" data-choice="rock">🪨</div>
+    <div class="choice" data-choice="paper">📄</div>
+    <div class="choice" data-choice="scissors">✂️</div>
+  </div>
+
+  <div id="result"></div>
+
+  <script src="/js/rps.js"></script>
+</body>
+</html>
